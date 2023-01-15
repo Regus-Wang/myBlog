@@ -1,0 +1,27 @@
+{% extends 'users/base.html' %}
+
+{% block head %}
+    <title>Password Modification Page</title>
+{% endblock head %}
+    
+
+{% block content %}
+    <div class="box">
+        <h1 class="is-uppercase has-text-centered has-text-weight-bold">Wang Zilong Blogsite
+            <br><span class="tag">Change password</span>
+        </h1>
+        <hr class=" dropdown-divider">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ form.errors }}
+           
+    <input type="submit" style="width: 150px;
+                height: 40px;
+                margin: 10px;
+                text-align: center;
+                margin-left: 210px;" class="button is-link is-fullwidth" value="Submit">
+        </form>
+    </div>
+
+{% endblock content %}

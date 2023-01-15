@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}<title>Login Page</title>{% endblock head %}
+    <link rel="stylesheet" href="{% static 'users/bulma.css' %}">
+</head>
+
+<body>
+<div class = "container" style="position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 300px;">
+    {% block content %}
+    
+    {% endblock content%}
+
+</div>
+
+</body>
+</html>

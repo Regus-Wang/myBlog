@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'users/bulma.css' %}">
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 300px;
+        }
+          {#background-color: pink;#}
+
+        .button {
+            width: 150px;
+            height: 40px;
+            margin: 10px;
+            text-align: center;
+            margin-left: 210px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class = "container">
+    <div class="box">
+        <h1 class="is-uppercase has-text-centered has-text-weight-bold is-size-4">Wang Zilong's Blogsite
+            <br><span class="tag is-size-6">Login Page</span>
+        </h1>
+        <hr class="dropdown-divider">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a class=" is-pulled-right is-size-7" href="{% url 'users:forget_pwd' %}">Forget password</a>
+        <a class=" is-pulled-right is-size-7" href="{% url 'users:register' %}">Register&ensp;&ensp;&ensp;</a>
+        <div class="is-clearfix"></div>
+{#        <span style="color: red">{{ form.errors }}</span>#}
+        <input type="submit" class="button is-link" value="submit">
+    </form>
+</div>
+</div>
+
+</body>
+</html>
